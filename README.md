@@ -1,2 +1,2 @@
 # JavaScriptEstudo
-Código gerado durante estudo de JavaScript
+Códigos gerados durante estudo de JavaScript
