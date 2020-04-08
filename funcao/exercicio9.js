@@ -23,4 +23,4 @@ const calculaNota = nota => {
     }
 }
 
-calculaNota("84")
+calculaNota("95")
