@@ -16,7 +16,6 @@ function kitanda(entrada) {
             throw new apresnetaErro('Essa fruta esta em falta')
     }
 
-
 }
 try {
     console.log(kitanda('maçã'))    
