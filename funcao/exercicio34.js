@@ -1,14 +1,32 @@
-const caracteres = (string1,string2) => {
+const caracteres = (string1, string2) => {
 
-    let arrayString1 = string1.split()
-    let arrayString2 = string2.split()
+    let arrayString1 = Array.from(string1.toUpperCase())
+    let arrayString2 = Array.from(string2.toUpperCase())
+    let retorno = true
 
-    console.log(arrayString1.every(elem => arrayString2.include(elem)))
+    if (arrayString2.length === arrayString1.length) {
+        arrayString2.filter(function (elem) {
+            if (retorno != false) {
+                if (arrayString1.indexOf(elem) === -1)
+                    retorno = false
+            }
+        })
 
+        /* if (retorno != true) {
+            retorno = true
+            arrayString1.filter(function (elem) {
+                if (retorno != false) {
+                    if (arrayString2.indexOf(elem) === -1)
+                        retorno = false
+                }
+            })
+        } */
+
+
+    } else {
+        retorno = false
+    }
+    console.log(retorno)
 }
 
-function teste(element,index,array){
-    return 
-}
-
-caracteres('flavio', 'avio')
+caracteres('Hum', 'H um')
