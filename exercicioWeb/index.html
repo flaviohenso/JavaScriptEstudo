@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Treinando Html com CSS</title>
+</head>
+
+<body>
+    <header>
+        Exercício HTML
+    </header>
+    <nav>
+        <a href link-personal="./exercicio/teste.html">exercicio 1 </a><!--exemplo com TAG personalizada-->
+        <a href link-personal="./exercicio/list.html">exercicio 2 </a><!--exemplo com TAG personalizada-->
+        <a href link-personal="./exercicio/listaAninhada.html">exercicio 3 </a><!--exemplo com TAG personalizada-->
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        </br>
+        Estudando HTML
+    </footer>
+    <script>
+        document.querySelectorAll('[link-personal]').forEach(element => {
+            const conteudo = document.getElementById('conteudo')
+            element.onclick = e => {
+                e.preventDefault()
+                fetch(element.getAttribute('link-personal'))
+                    .then(resp => resp.text())
+                    .then(html => {
+                        console.log(html)
+                        return conteudo.innerHTML = html})
+                    console.log("teste")
+            }
+        })
+    </script>
+</body>
+
+</html>
